@@ -136,19 +136,24 @@ public class CursoDao {
 		return curso;
 	}
 
-	public void remover(int id) {
+	public String remover(int id) {
+
+		String retorno = "falha";
 
 		Conexao conn = new Conexao();
 
-		String sql = "DELETE * FROM curso where id_curso=" + id;
+		String sql = "DELETE  FROM curso where id_curso=" + id;
 		try {
 			PreparedStatement stmt = conn.getConn().prepareStatement(sql);
 
 			stmt.execute(sql);
+
+			retorno = "sucesso";
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return retorno;
 
 	}
 

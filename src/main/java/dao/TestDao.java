@@ -54,6 +54,19 @@ public class TestDao {
 		 * 
 		 * dao.update(curso);
 		 */
+		
+		String id_curso = "2";
+		
+		CursoDao dao = new CursoDao();
+		
+		
+		Curso c = dao.buscarCursoId(Integer.parseInt(id_curso));
+		
+		
+		//dao.remover(c.getId_curso());
+		
+		
+		
 
 	}
 
