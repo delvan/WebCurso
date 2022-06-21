@@ -23,12 +23,12 @@ public class CursoDao {
 			ResultSet rs = stmt.executeQuery("Select * from curso ORDER BY id_curso DESC");
 			while (rs.next()) {
 				Curso livro = new Curso();
-				livro.setId_curso(rs.getInt("id_curso"));
-				livro.setNome_curso(rs.getString("nome_curso"));
-				livro.setData_curso(rs.getString("data_curso"));
-				livro.setHora_curso(rs.getTime("hora_curso"));
-				livro.setDuração_curso(rs.getInt("duracao_curso"));
-				livro.setResumo_curso(rs.getString("resumo_curso"));
+				livro.setIdCurso(rs.getInt("id_curso"));
+				livro.setNomeCurso(rs.getString("nome_curso"));
+				livro.setDataCurso(rs.getString("data_curso"));
+				livro.setHoraCurso(rs.getTime("hora_curso"));
+				livro.setDuracaoCurso(rs.getInt("duracao_curso"));
+				livro.setResumoCurso(rs.getString("resumo_curso"));
 
 				// Date dt = sf.parse(rs.getString("data_edicao"));
 
@@ -57,9 +57,9 @@ public class CursoDao {
 			Statement stmt = (Statement) conn.getConn().createStatement();
 			stmt.execute(
 					"insert into curso (id_curso, nome_curso, data_curso, hora_curso, duracao_curso, resumo_curso, data_criacao) "
-							+ "values (" + curso.getId_curso() + ",'" + curso.getNome_curso() + "'," + "'"
-							+ curso.getData_curso() + "', " + "'" + curso.getHora_curso() + "', " + ""
-							+ curso.getDuração_curso() + "," + "'" + curso.getResumo_curso() + "','" + LocalDate.now()
+							+ "values (" + curso.getIdCurso() + ",'" + curso.getNomeCurso() + "'," + "'"
+							+ curso.getDataCurso() + "', " + "'" + curso.getHoraCurso() + "', " + ""
+							+ curso.getDuracaoCurso() + "," + "'" + curso.getResumoCurso() + "','" + LocalDate.now()
 							+ "')");
 			retorno = "sucesso";
 
@@ -80,15 +80,15 @@ public class CursoDao {
 		try {
 
 			String query = "update curso set " + "nome_curso= ?, data_curso= ?, " + "hora_curso= ?, duracao_curso= ?,"
-					+ " resumo_curso= ?" + "where id_curso =" + curso.getId_curso();
+					+ " resumo_curso= ?" + "where id_curso =" + curso.getIdCurso();
 
 			PreparedStatement pStatement = conn.getConn().prepareStatement(query);
 
-			pStatement.setString(1, curso.getNome_curso());
-			pStatement.setString(2, curso.getData_curso());
-			pStatement.setTime(3, curso.getHora_curso());
-			pStatement.setInt(4, curso.getDuração_curso());
-			pStatement.setString(5, curso.getResumo_curso());
+			pStatement.setString(1, curso.getNomeCurso());
+			pStatement.setString(2, curso.getDataCurso());
+			pStatement.setTime(3, curso.getHoraCurso());
+			pStatement.setInt(4, curso.getDuracaoCurso());
+			pStatement.setString(5, curso.getResumoCurso());
 
 			pStatement.executeUpdate();
 
@@ -117,12 +117,12 @@ public class CursoDao {
 
 			if (rs.next()) {
 
-				curso.setId_curso(rs.getInt("id_curso"));
-				curso.setNome_curso(rs.getString("nome_curso"));
-				curso.setData_curso(rs.getString("data_curso"));
-				curso.setHora_curso(rs.getTime("hora_curso"));
-				curso.setDuração_curso(rs.getInt("duracao_curso"));
-				curso.setResumo_curso(rs.getString("resumo_curso"));
+				curso.setIdCurso(rs.getInt("id_curso"));
+				curso.setNomeCurso(rs.getString("nome_curso"));
+				curso.setDataCurso(rs.getString("data_curso"));
+				curso.setHoraCurso(rs.getTime("hora_curso"));
+				curso.setDuracaoCurso(rs.getInt("duracao_curso"));
+				curso.setResumoCurso(rs.getString("resumo_curso"));
 
 				// Calendar data = Calendar.getInstance();
 				// data.setTime(rs.getDate("dataNascimento"));

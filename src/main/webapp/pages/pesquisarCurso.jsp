@@ -38,25 +38,24 @@
 					<!--  	<img src="..." class="card-img-top" alt="..."> -->
 					<div class="card-body">
 						<h5 class="card-title">
-							<%=curso.getNome_curso()%>
+							<%=curso.getNomeCurso()%>
 						</h5>
 						<p class="card-text">
-							<%=curso.getResumo_curso()%>
+							<%=curso.getResumoCurso()%>
 						</p>
 						<p class="card-text">
-							<small class="text-muted">Duracão curso: <%=curso.getDuração_curso()%>
-							</small> <br> <small class="text-muted">Inicio Curso: <%=curso.getData_curso()%></small>
+							<small class="text-muted">Duracão curso: <%=curso.getDuracaoCurso()%>
+							</small> <br> <small class="text-muted">Inicio Curso: <%=curso.getDataCurso()%></small>
 
-							<small class="text-muted">Duracão curso: <%=curso.getDuração_curso()%>
-								h
+							<small class="text-muted"> Duracão curso: <%=curso.getDuracaoCurso()%> hora(s)
+
 							</small>
 						</p>
 
 						<a id="id_curso"
-							href="inserirCurso.jsp?id=<%=curso.getId_curso()%>"
-							class="btn btn-success">Alterar</a> 
-							<a class="btn btn-danger"
-							href="${pageContext.request.contextPath}/delete?id=<%=curso.getId_curso()%>">Remover</a>
+							href="inserirCurso.jsp?id=<%=curso.getIdCurso()%>"
+							class="btn btn-success">Alterar</a> <a class="btn btn-danger"
+							href="${pageContext.request.contextPath}/delete?id=<%=curso.getIdCurso()%>">Remover</a>
 
 
 					</div>
@@ -64,6 +63,8 @@
 
 			</div>
 		</div>
+
+
 
 
 

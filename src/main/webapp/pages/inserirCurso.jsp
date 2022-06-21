@@ -17,9 +17,12 @@
 String id = request.getParameter("id");
 
 if (id != null) {
+	
 	CursoDao dao = new CursoDao();
 
 	Curso curso = dao.buscarCursoId(Integer.parseInt(id));
+	
+	
 %>
 
 <div class="container">
@@ -30,13 +33,14 @@ if (id != null) {
 			<div class=col-2></div>
 			<div class=col-8>
 				<div class="input-group mb-3">
-					<input name="id" id="id" type="hidden" value="<%=curso.getId_curso()%>"> <label
-						class="input-group-text" for="inputGroupSelect01">Cursos</label> <select
+					<input name="id" id="id" type="hidden" value="<%=curso.getIdCurso()%>"> <label
+						class="input-group-text" for="inputGroupSelect01">Cursos</label> 
+					<select
 						class="form-select" id="nome_curso" name="nome_curso"
 						required="required">
 						<option selected disabled="disabled" value="">Selecione o
 							curso para alterar...</option>
-						<option value="java">JAVA</option>
+						<option value="java" >JAVA</option>
 						<option value="javascript">JavaScript</option>
 						<option value="c++">C++</option>
 						<option value="phython">Phython</option>
@@ -48,31 +52,34 @@ if (id != null) {
 
 				<label for="inputPassword5" class="form-label">Data Curso</label> <input
 					type="date" id="data_curso" name="data_curso" class="form-control"
-					required="required" value="<%=curso.getData_curso()%>"
+					required="required" value="<%=curso.getDataCurso()%>"
 					aria-describedby="passwordHelpBlock" /> <label
 					for="inputPassword5" class="form-label">Hora Curso</label> <input
 					type="time" id="hora_curso" name="hora_curso" required="required"
-					value="<%=curso.getHora_curso()%>" class="form-control"
+					value="<%=curso.getHoraCurso()%>" class="form-control"
 					aria-describedby="passwordHelpBlock" /> <label
 					for="inputPassword5" class="form-label">Duração do Curso</label> <input
 					type="number" id="duracao_curso" name="duracao_curso"
-					required="required" value="<%=curso.getDuração_curso()%>"
+					required="required" value="<%=curso.getDuracaoCurso()%>"
 					class="form-control" aria-describedby="passwordHelpBlock" />
 
 				<div class="mb-3">
 					<label for="exampleFormControlTextarea1" class="form-label">Resumo
 						do Curso</label>
 					<textarea class="form-control" name="resumo_curso"
-						required="required" id="resumo_curso" rows="3"><%=curso.getResumo_curso()%> </textarea>
+						required="required" id="resumo_curso" rows="3"><%=curso.getResumoCurso()%> </textarea>
 				</div>
 
 				<button type="submit" class="btn btn-warning">Alterar</button>
+				<a href="pesquisarCurso.jsp" class="btn btn-info">Voltar</a>
 
 
 			</div>
 			<div class=col-2></div>
 
 		</div>
+		
+		
 	</form>
 </div>
 
@@ -120,7 +127,7 @@ if (id != null) {
 				</div>
 
 				<button type="submit" class="btn btn-primary">Enviar</button>
-
+				<a href="pesquisarCurso.jsp" class="btn btn-info">Voltar</a>
 
 			</div>
 			<div class=col-2></div>

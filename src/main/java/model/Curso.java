@@ -4,66 +4,49 @@ import java.sql.Time;
 
 public class Curso {
 
-	private int id_curso;
-	private String nome_curso;
-	private String data_curso;
-	private Time hora_curso;
-	private Integer duração_curso;
-	private String resumo_curso;
-
-	public int getId_curso() {
-		return id_curso;
+	private int idCurso;
+	private String nomeCurso;
+	private String dataCurso;
+	private Time horaCurso;
+	private Integer duracaoCurso;
+	private String resumoCurso;
+	public int getIdCurso() {
+		return idCurso;
+	}
+	public void setIdCurso(int idCurso) {
+		this.idCurso = idCurso;
+	}
+	public String getNomeCurso() {
+		return nomeCurso;
+	}
+	public void setNomeCurso(String nomeCurso) {
+		this.nomeCurso = nomeCurso;
+	}
+	public String getDataCurso() {
+		return dataCurso;
+	}
+	public void setDataCurso(String dataCurso) {
+		this.dataCurso = dataCurso;
+	}
+	public Time getHoraCurso() {
+		return horaCurso;
+	}
+	public void setHoraCurso(Time horaCurso) {
+		this.horaCurso = horaCurso;
+	}
+	public Integer getDuracaoCurso() {
+		return duracaoCurso;
+	}
+	public void setDuracaoCurso(Integer duracaoCurso) {
+		this.duracaoCurso = duracaoCurso;
+	}
+	public String getResumoCurso() {
+		return resumoCurso;
+	}
+	public void setResumoCurso(String resumoCurso) {
+		this.resumoCurso = resumoCurso;
 	}
 
-	public void setId_curso(int id_curso) {
-		this.id_curso = id_curso;
-	}
 
-	public String getNome_curso() {
-		return nome_curso;
-	}
-
-	public void setNome_curso(String nome_curso) {
-		this.nome_curso = nome_curso;
-	}
-
-	public String getData_curso() {
-		return data_curso;
-	}
-
-	public void setData_curso(String data_curso) {
-		this.data_curso = data_curso;
-	}
-
-	public Time getHora_curso() {
-		return hora_curso;
-	}
-
-	public void setHora_curso(Time hora_curso) {
-		this.hora_curso = hora_curso;
-	}
-
-	public Integer getDuração_curso() {
-		return duração_curso;
-	}
-
-	public void setDuração_curso(Integer duração_curso) {
-		this.duração_curso = duração_curso;
-	}
-
-	public String getResumo_curso() {
-		return resumo_curso;
-	}
-
-	public void setResumo_curso(String resumo_curso) {
-		this.resumo_curso = resumo_curso;
-	}
-
-	@Override
-	public String toString() {
-		return "Curso [id_curso=" + id_curso + ", nome_curso=" + nome_curso + ", data_curso=" + data_curso
-				+ ", hora_curso=" + hora_curso + ", duração_curso=" + duração_curso + ", resumo_curso=" + resumo_curso
-				+ "]";
-	}
 
 }

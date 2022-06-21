@@ -9,22 +9,32 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>CursoServlet</display-name>
-    <servlet-name>CursoServlet</servlet-name>
-    <servlet-class>control.CursoServlet</servlet-class>
+    <display-name>CursoInserirServlet</display-name>
+    <servlet-name>CursoInserirServlet</servlet-name>
+    <servlet-class>control.CursoInserirServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CursoServlet</servlet-name>
-    <url-pattern>/CursoServlet</url-pattern>
+    <servlet-name>CursoInserirServlet</servlet-name>
+    <url-pattern>/CursoInserirServlet</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>DeleteServlet</display-name>
-    <servlet-name>DeleteServlet</servlet-name>
-    <servlet-class>control.DeleteServlet</servlet-class>
+    <display-name>CursoAlterarServlet</display-name>
+    <servlet-name>CursoAlterarServlet</servlet-name>
+    <servlet-class>control.CursoAlterarServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DeleteServlet</servlet-name>
-    <url-pattern>/DeleteServlet</url-pattern>
+    <servlet-name>CursoAlterarServlet</servlet-name>
+    <url-pattern>/CursoAlterarServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CursoDeleteServlet</display-name>
+    <servlet-name>CursoDeleteServlet</servlet-name>
+    <servlet-class>control.CursoDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CursoDeleteServlet</servlet-name>
+    <url-pattern>/CursoDeleteServlet</url-pattern>
   </servlet-mapping>
 </web-app>
